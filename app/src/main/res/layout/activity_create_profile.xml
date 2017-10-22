@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/Background"
+    tools:context="com.example.theo1.nutripocket.CreateProfileActivity"    >
+
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.35"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/introText"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.06">
+
+
+        <EditText
+            android:id="@+id/nameFirst"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/regularText"
+            android:ems="10"
+            android:hint="@string/nameFirst"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/regularText"
+            android:textColorHint="@color/regularText"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/nameLast"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/emphasisText"
+            android:ems="10"
+            android:hint="@string/nameLast"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/regularText"
+            android:textColorHint="@color/regularText"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:gravity="center_horizontal|center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/emphasisText"
+            android:ems="10"
+            android:hint="@string/age"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/regularText"
+            android:textColorHint="@color/regularText"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/emphasisText"
+            android:hint="@string/height"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/regularText"
+            android:textColorHint="@color/regularText"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/emphasisText"
+            android:hint="@string/weight"
+            android:inputType="number"
+            android:textColor="@color/regularText"
+            android:textColorHint="@color/regularText"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.17"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.example.theo1.nutripocket.customviews.NoDefaultSpinnerG
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:entries="@array/genderSpinner" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/CP1Button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/Background"
+        android:elevation="0dp"
+        android:onClick="saveUserInfo"
+        android:text="@string/CP1Button"
+        android:textColor="@color/emphasisText"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

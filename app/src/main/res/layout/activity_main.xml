@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.theo1.nutripocket.MainActivity"
+    android:weightSum="1">
+
+
+    <TextView
+        android:id="@+id/calorieGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.11"
+        android:gravity="center"
+        android:text="@string/calorieGoal"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08"
+        android:gravity="center_vertical">
+
+
+        <ProgressBar
+            android:id="@+id/calorieProgressBar"
+            android:scaleY="10"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:progressBackgroundTint="@color/lightGrey"
+            android:progressTint="@color/darkBackground"/>
+
+        <TextView
+            android:id="@+id/currentCalories"
+            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@id/calorieProgressBar"
+            android:layout_alignLeft="@id/calorieProgressBar"
+            android:layout_alignParentTop="@id/calorieProgressBar"
+            android:layout_alignRight="@id/calorieProgressBar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:text="@string/calorieCurrent"
+            android:textAlignment="textStart" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/macroNutrientTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:text="@string/macroNutrientTitle"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/mnGoalValues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/carbValueGoal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/carbValueGoal"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/proteinValueGoal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:text="@string/proteinValueGoal"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/fatValueGoal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fatValueGoal"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/goal"
+                android:background="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/goal"
+                android:background="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/goal"
+                android:background="@android:color/darker_gray" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mnGoalTitles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.29"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/carbGoalTitle"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/carbGoalTitle"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/proteinGoalTitle"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:text="@string/proteinGoalTitle"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fatGoalTitle"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fatGoalTitle"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/caloricBreakdownButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonCaloricBreakdown" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_weight=".27">
+
+        <Button
+            android:id="@+id/log_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/Background"
+            android:text="@string/log_button"
+            android:textAllCaps="false"
+            android:textColor="@color/regularText" />
+
+        <Button
+            android:id="@+id/nutrition_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/Background"
+            android:text="@string/nutrition_button"
+            android:textAllCaps="false"
+            android:textColor="@color/regularText" />
+
+        <Button
+            android:id="@+id/pref_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/Background"
+            android:text="@string/preferences_button"
+            android:textAllCaps="false"
+            android:textColor="@color/regularText" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
